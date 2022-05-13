@@ -150,7 +150,6 @@ public class PublisherHandler {
   }
 
   public Mono<ServerResponse> numberstream(ServerRequest request) {
-    var flux = Flux.interval(Duration.ofMillis(500)); // 0.5秒毎に数値を0からカウントアップして返す
     return ServerResponse
             .ok()
             .contentType(MediaType.APPLICATION_NDJSON)
